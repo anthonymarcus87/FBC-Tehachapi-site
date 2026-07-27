@@ -8,11 +8,17 @@ if (toggle && menu) {
   });
 }
 
-// Today's Psalm widget (home page only) — psalm number matches the day of the month
-const psalmEl = document.getElementById('psalmNum');
-if (psalmEl) {
-  const day = new Date().getDate();
-  psalmEl.textContent = 'Psalm ' + day;
+// Today's Reading widget (home page only)
+// Proverb of the day matches the day of the month (Proverbs has 31 chapters)
+// Psalms: five readings spaced 30 chapters apart, wrapping within the 150 Psalms
+const proverbEl = document.getElementById('proverbNum');
+const psalmsEl = document.getElementById('psalmNums');
+if (proverbEl && psalmsEl) {
+  const day = new Date().getDate(); // 1-31
+  proverbEl.textContent = 'Proverbs ' + day;
+
+  const psalmNumbers = [0, 30, 60, 90, 120].map(offset => ((day - 1 + offset) % 150) + 1);
+  psalmsEl.textContent = 'Psalms ' + psalmNumbers.join(' · ');
 }
 
 // Scroll reveal
