@@ -51,6 +51,13 @@ header{
   font-size:1.15rem;
   letter-spacing:0.02em;
   text-decoration:none;
+  display:flex;
+  align-items:center;
+}
+.brand .logo-img{
+  height:46px;
+  width:auto;
+  display:block;
 }
 .brand strong{color:var(--gold-soft); font-weight:700;}
 nav ul{
