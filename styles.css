@@ -221,7 +221,33 @@ section{padding:88px 24px;}
 .belief p{font-size:0.92rem; color:rgba(28,27,24,0.75); margin:0;}
 @media (max-width:760px){.beliefs-grid{grid-template-columns:1fr;}}
 
-/* Mission / Vision pillars */
+/* Mission / Vision — Five M's list */
+.five-ms{
+  max-width:680px; margin:0 auto;
+  border-top:1px solid var(--line);
+}
+.five-m-row{
+  display:grid; grid-template-columns:64px 1fr;
+  gap:22px;
+  padding:22px 4px;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+.five-m-row .m-letter{
+  font-family:var(--serif); font-size:2.2rem; color:var(--clay);
+  line-height:1;
+}
+.five-m-row h4{
+  font-family:var(--serif); font-weight:400; font-size:1.15rem; margin:0 0 6px;
+  color:var(--navy);
+}
+.five-m-row h4 .category{
+  font-family:var(--sans); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--clay); display:block; margin-bottom:4px;
+}
+.five-m-row p{margin:0; font-size:0.92rem; color:rgba(28,27,24,0.75);}
+
+/* Mission / Vision pillars (legacy, unused) */
 .pillars{
   display:grid; grid-template-columns:repeat(5, 1fr); gap:20px;
 }
@@ -277,6 +303,41 @@ section{padding:88px 24px;}
   padding:36px 40px;
 }
 .history-block p{font-size:0.96rem; color:rgba(28,27,24,0.8);}
+
+.charter-list{
+  columns:2; column-gap:32px;
+  font-size:0.9rem; color:rgba(28,27,24,0.75);
+  list-style:none; padding:0; margin:16px 0 0;
+}
+.charter-list li{padding:3px 0; break-inside:avoid;}
+
+.pastor-list{
+  display:grid; grid-template-columns:1fr 1fr; gap:6px 32px;
+  font-size:0.9rem; margin-top:6px;
+}
+.pastor-list .p-row{
+  display:flex; justify-content:space-between;
+  border-bottom:1px dotted var(--line);
+  padding:5px 0;
+  color:rgba(28,27,24,0.8);
+}
+.pastor-list .p-row .yrs{color:var(--clay); font-family:var(--serif);}
+@media (max-width:640px){.pastor-list{grid-template-columns:1fr;}}
+
+.fun-facts{
+  list-style:none; padding:0; margin:0;
+  font-size:0.9rem; color:rgba(28,27,24,0.78);
+}
+.fun-facts li{
+  padding:10px 0 10px 24px;
+  border-bottom:1px solid var(--line);
+  position:relative;
+}
+.fun-facts li::before{
+  content:"\2726";
+  position:absolute; left:0; color:var(--gold);
+  font-size:0.75rem; top:13px;
+}
 
 /* This week */
 .week-list{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);}
