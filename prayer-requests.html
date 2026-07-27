@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prayer Requests — First Baptist Church, Tehachapi</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .prayer-form{
+    max-width:560px; margin:0 auto;
+    display:grid; gap:20px;
+  }
+  .prayer-form label{
+    display:block; font-size:0.8rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--clay); margin-bottom:8px;
+  }
+  .prayer-form input[type="text"],
+  .prayer-form input[type="email"],
+  .prayer-form textarea{
+    width:100%;
+    font-family:var(--sans);
+    font-size:1rem;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:2px;
+    background:#fff;
+    color:var(--ink);
+  }
+  .prayer-form input:focus, .prayer-form textarea:focus{
+    outline:2px solid var(--clay); outline-offset:1px;
+  }
+  .prayer-form textarea{min-height:150px; resize:vertical;}
+  .checkbox-row{
+    display:flex; align-items:flex-start; gap:10px; font-size:0.88rem; color:rgba(28,27,24,0.8);
+  }
+  .checkbox-row input{margin-top:4px;}
+  .submit-btn{
+    font-family:var(--sans); font-size:0.95rem; letter-spacing:0.04em;
+    background:var(--gold); color:var(--navy-deep); font-weight:700;
+    border:none; padding:14px 28px; border-radius:2px; cursor:pointer;
+    transition:background .2s ease;
+  }
+  .submit-btn:hover{background:var(--gold-soft);}
+  .form-note{font-size:0.82rem; color:rgba(28,27,24,0.6); margin-top:-6px;}
+  #formStatus{
+    max-width:560px; margin:24px auto 0; padding:16px 18px;
+    border-radius:2px; font-size:0.9rem; display:none;
+  }
+  #formStatus.success{background:#E4EFE1; color:#2A5A34; display:block;}
+  #formStatus.error{background:#F3DCD4; color:#7A2E1B; display:block;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">First Baptist <strong>Tehachapi</strong></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="prayer-requests.html" class="active">Prayer</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="eyebrow">We Would Be Honored to Pray With You</div>
+  <h1>Prayer Requests</h1>
+  <p>Share what's on your heart. Your request goes directly and privately to our prayer team.</p>
+</div>
+
+<section>
+  <div class="section-inner">
+    <form class="prayer-form" id="prayerForm" action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+      <input type="hidden" name="subject" value="New Prayer Request — First Baptist Tehachapi">
+      <input type="hidden" name="from_name" value="FBC Tehachapi Website">
+      <input type="checkbox" name="botcheck" style="display:none;">
+
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div>
+        <label for="email">Email <span style="text-transform:none; letter-spacing:0;">(optional, if you'd like a reply)</span></label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div>
+        <label for="request">Prayer Request</label>
+        <textarea id="request" name="message" required placeholder="Share as much or as little as you'd like..."></textarea>
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="confidential" name="confidential" value="Yes — keep this confidential, prayer team only">
+        <label for="confidential" style="text-transform:none; letter-spacing:0; font-size:0.88rem; margin:0;">Keep this confidential — share with the prayer team only, not in any public prayer list</label>
+      </div>
+
+      <div>
+        <button type="submit" class="submit-btn">Send Prayer Request</button>
+        <p class="form-note">This goes directly to our prayer team lead by email. Nothing is posted publicly.</p>
+      </div>
+
+    </form>
+
+    <div id="formStatus"></div>
+  </div>
+</section>
+
+<section style="background:#EFE9D8; padding-top:0;">
+  <div class="section-inner">
+    <div class="history-block fade-in">
+      <p><strong>Setup note for whoever maintains this site:</strong> this form uses <a href="https://web3forms.com" target="_blank" rel="noopener" style="color:var(--clay); font-weight:bold;">Web3Forms</a>, a free service that emails form submissions — no server or database required. To activate it:</p>
+      <p>1. Go to web3forms.com and enter the prayer team lead's email address. They'll receive an Access Key by email.<br>
+      2. Replace <code>YOUR_WEB3FORMS_ACCESS_KEY</code> in this page's HTML (the hidden <code>access_key</code> field near the top of the form) with that key.<br>
+      3. That's it — submissions will arrive by email from then on, free, with no submission limit.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand-line">First Baptist Church</div>
+  <div>1049 S Curry St, Tehachapi, CA 93561</div>
+  <div style="margin-top:10px;">
+    <a href="tel:+16618223138">661-822-3138</a> · <a href="mailto:mainoffice@fbc-tehachapi.com">mainoffice@fbc-tehachapi.com</a>
+  </div>
+  <div style="margin-top:6px; font-size:0.8rem; color:rgba(245,241,230,0.5);">Office Hours: Mon–Fri, 8am–4pm</div>
+  <div style="margin-top:14px;">
+    <a href="https://www.facebook.com/profile.php?id=100064793223810" target="_blank" rel="noopener">Facebook</a> ·
+    <a href="https://www.instagram.com/tehachapifirstbaptist/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const form = document.getElementById('prayerForm');
+  const statusBox = document.getElementById('formStatus');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    statusBox.className = '';
+    statusBox.style.display = 'none';
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      const result = await response.json();
+      if (result.success) {
+        statusBox.textContent = "Thank you — your prayer request has been sent to our prayer team.";
+        statusBox.className = 'success';
+        form.reset();
+      } else {
+        statusBox.textContent = "Something went wrong. Please try again, or reach us directly at mainoffice@fbc-tehachapi.com.";
+        statusBox.className = 'error';
+      }
+    } catch (err) {
+      statusBox.textContent = "Something went wrong. Please try again, or reach us directly at mainoffice@fbc-tehachapi.com.";
+      statusBox.className = 'error';
+    }
+  });
+</script>
+</body>
+</html>

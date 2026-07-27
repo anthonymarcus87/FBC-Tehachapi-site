@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — First Baptist Church, Tehachapi</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  .g1{background:linear-gradient(135deg, #14213D, #A8562E);}
+  .g2{background:linear-gradient(135deg, #0B1526, #C9962C);}
+  .g3{background:linear-gradient(135deg, #A8562E, #E4C77D);}
+  .g4{background:linear-gradient(135deg, #14213D, #E4C77D);}
+  .g5{background:linear-gradient(135deg, #C9962C, #0B1526);}
+  .g6{background:linear-gradient(135deg, #A8562E, #14213D);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">First Baptist <strong>Tehachapi</strong></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="staff.html">Staff</a></li>
+        <li><a href="ministries.html">Ministries</a></li>
+        <li><a href="prayer-requests.html">Prayer</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="eyebrow">Life at First Baptist</div>
+  <h1>Gallery</h1>
+  <p>A look at worship, fellowship, and church life through the seasons.</p>
+</div>
+
+<section>
+  <div class="section-inner">
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item g1"><span>Sunday Worship</span></div>
+      <div class="gallery-item g2"><span>Fellowship</span></div>
+      <div class="gallery-item g3"><span>Baptism</span></div>
+      <div class="gallery-item g4"><span>Wednesday Study</span></div>
+      <div class="gallery-item g5"><span>Church Family</span></div>
+      <div class="gallery-item g6"><span>Community</span></div>
+    </div>
+    <p class="edit-note">Edit note: these tiles are placeholders. Replace each with a real photo (see instructions below) and update the caption.</p>
+  </div>
+</section>
+
+<section style="background:#EFE9D8; padding-top:0;">
+  <div class="section-inner">
+    <div class="history-block fade-in">
+      <p><strong>How to add your own photos:</strong> replace a placeholder tile's <code>&lt;div class="gallery-item g1"&gt;</code> with <code>&lt;div class="gallery-item" style="background-image:url('photos/your-photo.jpg'); background-size:cover; background-position:center;"&gt;</code>, then add your image files to a <code>photos</code> folder next to this page.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand-line">First Baptist Church</div>
+  <div>1049 S Curry St, Tehachapi, CA 93561</div>
+  <div style="margin-top:10px;">
+    <a href="tel:+16618223138">661-822-3138</a> · <a href="mailto:mainoffice@fbc-tehachapi.com">mainoffice@fbc-tehachapi.com</a>
+  </div>
+  <div style="margin-top:6px; font-size:0.8rem; color:rgba(245,241,230,0.5);">Office Hours: Mon–Fri, 8am–4pm</div>
+  <div style="margin-top:14px;">
+    <a href="https://www.facebook.com/profile.php?id=100064793223810" target="_blank" rel="noopener">Facebook</a> ·
+    <a href="https://www.instagram.com/tehachapifirstbaptist/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
