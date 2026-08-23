@@ -357,17 +357,17 @@ section{padding:88px 24px;}
 .staff-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:36px;}
 .staff-card{text-align:center;}
 .staff-photo{
-  width:132px; height:132px; border-radius:50%;
-  margin:0 auto 18px;
+  width:92px; height:92px; border-radius:50%;
+  margin:0 auto 16px;
   background:linear-gradient(135deg, var(--navy), var(--clay));
   color:var(--parchment);
   display:flex; align-items:center; justify-content:center;
-  font-family:var(--serif); font-size:1.6rem; letter-spacing:0.04em;
+  font-family:var(--serif); font-size:1.3rem; letter-spacing:0.04em;
   border:3px solid var(--gold-soft);
 }
 .staff-photo-img{
-  width:132px; height:132px; border-radius:50%;
-  margin:0 auto 18px;
+  width:92px; height:92px; border-radius:50%;
+  margin:0 auto 16px;
   object-fit:cover;
   border:3px solid var(--gold-soft);
 }
