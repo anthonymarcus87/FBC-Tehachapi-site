@@ -365,6 +365,12 @@ section{padding:88px 24px;}
   font-family:var(--serif); font-size:1.6rem; letter-spacing:0.04em;
   border:3px solid var(--gold-soft);
 }
+.staff-photo-img{
+  width:132px; height:132px; border-radius:50%;
+  margin:0 auto 18px;
+  object-fit:cover;
+  border:3px solid var(--gold-soft);
+}
 .staff-card h3{font-family:var(--serif); font-weight:400; font-size:1.15rem; margin:0 0 4px;}
 .staff-role{font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--clay); margin-bottom:12px;}
 .staff-card p.bio{font-size:0.9rem; color:rgba(28,27,24,0.75); margin:0;}
